@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app"
+    "test": "nyc --reporter=text --reporter=html mocha",
+    "start": "forever start ./app.js",
+    "stop": "forever stop app.js"
   },
   "dependencies": {
     "express": "3.1.0",
